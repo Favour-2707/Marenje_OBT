@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Marenje OBT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/40b365e3ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo2.png" alt="OBT Logo" id="logo">
+        <nav class="navigation">
+            <a href="index.html" class="nav-items">Home</a>
+            <a href="about.html" class="nav-items">About</a>
+            <a href="team.html" class="nav-items">Team</a>
+            <a href="contact.html" class="nav-items">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Reach out through the form or details below.</p>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@marenjeobt.org</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+265 999 123 456</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Phalombe, Malawi</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                <label>
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                </label>
+
+                <label>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </label>
+
+                <label>
+                    <input  name="subject" placeholder="Subject">
+                </label>
+                
+                <label>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </label>
+                <!-- honeypot spam trap -->
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <script>
+            const form = document.querySelector('.contact-form');
+            const btn  = form.querySelector('button');
+            let status = document.createElement('p');
+            status.className = 'form-status';
+            form.appendChild(status);
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                status.textContent = 'Sending...';
+                btn.disabled = true;
+
+                try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (res.ok) {
+                    form.reset();
+                    status.textContent = 'Thanks — we received your message!';
+                } else {
+                    const data = await res.json();
+                    status.textContent = (data.errors && data.errors.map(e => e.message).join(', ')) ||
+                                        'Oops! Something went wrong.';
+                }
+                } catch (err) {
+                status.textContent = 'Network error. Please try again.';
+                } finally {
+                btn.disabled = false;
+                }
+            });
+        </script>
+
+
+
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <img src="images/logo.png" alt="">
+            <p>2025 Marenje OBT. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
