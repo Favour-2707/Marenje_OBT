@@ -11,7 +11,7 @@ html {
 }
 
 .navigation {
-    background-color: rgb(118, 185, 160);
+    background-color: rgb(77, 207, 160);
     height: 12vh;
     display: flex;
     justify-content: flex-end;
@@ -98,7 +98,7 @@ html {
 
 .goals-items i {
     font-size: 2rem;
-    color: rgb(118, 185, 160);
+    color: rgb(77, 207, 160);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -106,7 +106,7 @@ html {
 /* Bible Verse */
 .verse {
     padding: 2rem;
-    background: rgb(118, 185, 160);
+    background: rgb(77, 207, 160);
     color: white;
     text-align: center;
     margin-bottom: 1rex;
@@ -196,7 +196,7 @@ html {
 }
 .about-quote { 
     background-color: rgba(118, 185, 160, 0.08);
-    border-left: 5px solid rgb(118, 185, 160);
+    border-left: 5px solid rgb(77, 207, 160);
     font-style: italic;
     animation-delay: 0.8s;
 }
@@ -273,7 +273,7 @@ html {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid rgb(118, 185, 160);
+    border: 3px solid rgb(77, 207, 160);
 }
 
 /* Member Info */
@@ -291,7 +291,7 @@ html {
 
 .team-info .role {
     font-weight: bold;
-    color: rgb(118, 185, 160);
+    color: rgb(77, 207, 160);
     margin-bottom: 0.5rem;
 }
 
@@ -347,7 +347,7 @@ html {
 
 .info-item i {
     font-size: 2rem;
-    color: rgb(118, 185, 160);
+    color: rgb(77, 207, 160);
     margin-bottom: 0.5rem;
 }
 /* animation for contact-info and conatact-form */
@@ -389,7 +389,7 @@ html {
 
 .contact-form button {
     padding: 0.8rem;
-    background: rgb(118, 185, 160);
+    background: rgb(77, 207, 160);
     color: white;
     border: none;
     border-radius: 6px;
