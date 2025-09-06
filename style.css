@@ -183,15 +183,15 @@ html {
 
 /* Different delays so they appear one after another */
 .about-history { 
-    background-color: #dedfe0;
+    background-color: #f7f9fc;
     animation-delay: 0.2s;
 }
 .about-vision { 
-    background-color: #f0e7e0;
+    background-color: #fff7f0;
     animation-delay: 0.4s;
 }
 .about-mission { 
-    background-color: #dfeee8;
+    background-color: #f3fdf9;
     animation-delay: 0.6s;
 }
 .about-quote { 
