@@ -9,14 +9,27 @@
 </head>
 <body>
     <header>
-        <img src="images/logo2.png" alt="OBT Logo" id="logo">
-        <nav class="navigation">
-            <a href="index.html" class="nav-items">Home</a>
-            <a href="about.html" class="nav-items">About</a>
-            <a href="team.html" class="nav-items">Team</a>
-            <a href="contact.html" class="nav-items">Contact</a>
-        </nav>
+        <div class="topnav">
+            <!-- Logo stays left -->
+            <a href="https://www.twftw.org/" target="_blank" class="logo">
+                <img src="images/logo2.png" alt="The Word For The World Logo" id="logo">
+            </a>
+
+            <!-- Navigation links -->
+            <nav class="navigation" id="myLinks">
+                <a href="index.html" class="nav-items">Home</a>
+                <a href="about.html" class="nav-items">About</a>
+                <a href="team.html" class="nav-items">Team</a>
+                <a href="contact.html" class="nav-items">Contact</a>
+            </nav>
+
+            <!-- Hamburger (only shows on mobile) -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
+
 
     <main>
         <!-- Hero Section -->
@@ -107,9 +120,10 @@
 
     <footer>
         <div class="copyright">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo.png" alt="The Word For The World Logo">
             <p>2025 Marenje OBT. All rights reserved</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

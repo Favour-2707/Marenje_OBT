@@ -1,158 +1,211 @@
 /* I use comments for eazy aceesibility and debugging...thanks */
 
+/* Reset */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
-.navigation {
-    background-color: rgb(77, 207, 160);
-    height: 12vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-    padding-right: 1rem;
-    
+/* Top Navigation */
+.topnav {
+  background-color: rgb(77, 207, 160);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1000;
+}
+.topnav #mylinks{
+  position: absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  background: rgb(77, 207, 160)
+  z-index: 2000;
 }
 
 #logo {
-    height: 10vh;
-    position: absolute;
-    left: 1rem;
-    top: 0.5rem;
+  height: 10vh;
+  left: 1rem;
+  top: 0.5rem;
+}
+
+/* Default navigation (desktop) */
+.navigation {
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-items {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .nav-items:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Hide hamburger on desktop */
+.icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile nav hidden by default */
+@media (max-width: 700px) {
+  .navigation {
+    flex-direction: column;
+    background-color: rgb(77, 207, 160);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 0;
+
+    /* For smooth slide effect */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .navigation.show {
+    max-height: 500px; /* enough to show all items */
+    transition: max-height 0.3s ease-in;
+  }
+
+  .navigation a {
+    text-align: left;
+    padding: 10px 16px;
+  }
+
+  .icon {
+    display: block;
+  }
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/MARENJE\ TEAM2.jpg") center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url("images/MARENJE TEAM2.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
+
+/* Change hero image on smaller screens */
 @media (max-width: 900px) {
-    .hero {
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/MARENJE\ TEAM1.jpg") center/cover no-repeat;
-        color: white;
-        text-align: center;
-        padding: 4rem 1rem;
-    }
-    
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("images/MARENJE TEAM1.jpg") center/cover no-repeat;
+  }
 }
 
 /* Intro Paragraph */
 .intro {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.6;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* Goals Section */
 .goals {
-    background-color: #f7f7f7;
-    padding: 2rem;
-    text-align: center;
+  background-color: #f7f7f7;
+  padding: 2rem;
+  text-align: center;
 }
 
 .goals-items {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .goals-items li {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .goals-items i {
-    font-size: 2rem;
-    color: rgb(77, 207, 160);
-    display: block;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: rgb(77, 207, 160);
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 /* Bible Verse */
 .verse {
-    padding: 2rem;
-    background: rgb(77, 207, 160);
-    color: white;
-    text-align: center;
-    margin-bottom: 1rex;
+  padding: 2rem;
+  background: rgb(77, 207, 160);
+  color: white;
+  text-align: center;
 }
 
 .verse blockquote {
-    font-style: italic;
-    font-size: 1.2rem;
-    line-height: 1.5;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .verse span {
-    display: block;
-    margin-top: 0.5rem;
-    font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
 
-.intro, .goals, .verse{
-    opacity: 0;
-    animation: fade-In-Up 1s ease forwards;
-}
-/* Different delays so they appear one after another */
-.intro { 
-    animation-delay: 0.2s;
-}
-.goals { 
-    animation-delay: 0.4s;
-}
-.verse{ 
-    animation-delay: 0.6s;
-}
 /* Footer */
 .copyright {
-    border-top: solid black 1px;
-    background: rgba(236, 233, 228, 0.5);
-    height: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-top: solid black 1px;
+  background: rgba(236, 233, 228, 0.5);
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .copyright img {
-    height: 6vh;
-    margin-right: 0.5rem;
+  height: 6vh;
+  margin-right: 0.5rem;
 }
 
+.intro, .goals, .verse{
+  opacity: 0;
+  animation: fade-In-Up 1s ease forwards;
+}
+
+/* different delays, so they appear one after the other */
+.intro{
+  animation-delay: 0.2s;
+}
+.goals{
+  animation-delay: 0.4s;
+}
+.verse{
+  animation-delay: 0.6s;
+}
 /* ===== About-Page Styles ===== */
 
 

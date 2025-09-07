@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marenje OBT</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/40b365e3ff.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marenje OBT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/40b365e3ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <img src="images/logo2.png" alt="OBT Logo" id="logo">
-        <nav class="navigation">
-            <a href="index.html" class="nav-items">Home</a>
-            <a href="about.html" class="nav-items">About</a>
-            <a href="team.html" class="nav-items">Team</a>
-            <a href="contact.html" class="nav-items">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="topnav">
+      <!-- Logo stays left -->
+      <a href="https://www.twftw.org/" target="_blank" class="logo">
+        <img src="images/logo2.png" alt="The Word For The World Logo" id="logo">
+      </a>
 
-    <main>
-        <section class="hero">
-            <h1>The Marenje Team</h1>
-            <p>Dedicated to bringing God's Word to the Marenje people</p>
-        </section>
+      <!-- Navigation links -->
+      <nav class="navigation" id="myLinks">
+        <a href="index.html" class="nav-items">Home</a>
+        <a href="about.html" class="nav-items">About</a>
+        <a href="team.html" class="nav-items">Team</a>
+        <a href="contact.html" class="nav-items">Contact</a>
+      </nav>
 
-        <section class="intro">
-            <p>The Marenje OBT is part of <strong>The Word For The World</strong>, working tirelessly to translate the Bible from English into Marenje language. 
-               Our mission is to ensure that everyone can hear and read the Word of God in their heart language.</p>
-        </section>
+      <!-- Hamburger (only shows on mobile) -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
 
-        <section class="goals">
-            <h2>Our Goals</h2>
-            <ul class="goals-items">
-                <li><i class="fas fa-bible"></i> Ensure everyone has access to the Word of God</li>
-                <li><i class="fas fa-calendar-alt"></i> Translate the entire Bible by 2050</li>
-                <li><i class="fas fa-users"></i> Connect people beyond language barriers</li>
-            </ul>
-        </section>
+  <main>
+    <section class="hero">
+      <h1>The Marenje Team</h1>
+      <p>Dedicated to bringing God's Word to the Marenje people</p>
+    </section>
 
-        <section class="verse">
-            <blockquote>
-                “Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.”  
-                <span>- Matthew 28:19</span>
-            </blockquote>
-        </section>
-    </main>
+    <section class="intro">
+      <p>The Marenje OBT is part of <strong>The Word For The World</strong>, working tirelessly to translate the Bible from English into Marenje language. 
+         Our mission is to ensure that everyone can hear and read the Word of God in their heart language.</p>
+    </section>
 
-    <footer>
-        <div class="copyright">
-            <img src="images/logo.png" alt="">
-            <p>2025 Marenje OBT. All rights reserved</p>
-        </div>
-    </footer>
+    <section class="goals">
+      <h2>Our Goals</h2>
+      <ul class="goals-items">
+        <li><i class="fas fa-bible"></i> Ensure everyone has access to the Word of God</li>
+        <li><i class="fas fa-calendar-alt"></i> Translate the entire Bible by 2050</li>
+        <li><i class="fas fa-users"></i> Connect people beyond language barriers</li>
+      </ul>
+    </section>
+
+    <section class="verse">
+      <blockquote>
+        “Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.”  
+        <span>- Matthew 28:19</span>
+      </blockquote>
+    </section></hr>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <img src="images/logo.png" alt="The Word For The World Logo">
+      <p>2025 Marenje OBT. All rights reserved</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
