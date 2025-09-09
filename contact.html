@@ -57,7 +57,7 @@
         <!-- Contact Form -->
         <section class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+            <form action="https://formspree.io/f/mqadneqe" method="POST">
                 <label>
                     <input type="text" name="name" placeholder="Your Full Name" required>
                 </label>
@@ -80,7 +80,7 @@
             </form>
         </section>
         <script>
-            const form = document.querySelector('.contact-form');
+            const form = document.querySelector('.contact-form form');
             const btn  = form.querySelector('button');
             let status = document.createElement('p');
             status.className = 'form-status';
@@ -101,10 +101,12 @@
                 if (res.ok) {
                     form.reset();
                     status.textContent = 'Thanks — we received your message!';
+                    staus.className = 'form-staus success';
                 } else {
                     const data = await res.json();
                     status.textContent = (data.errors && data.errors.map(e => e.message).join(', ')) ||
                                         'Oops! Something went wrong.';
+                    status.className = 'form-status error';
                 }
                 } catch (err) {
                 status.textContent = 'Network error. Please try again.';
