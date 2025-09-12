@@ -94,11 +94,24 @@ html {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-              url("images/MARENJE TEAM2.jpg") center/cover no-repeat;
+  /* fallback for browsers that don't understand image-set */
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url("images/marenje_team2.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 4rem 1rem;
+
+  /* modern browsers will prefer WebP */
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              -webkit-image-set(
+                url("images/toWEBP/marenje_team2.webp") type("image/webp") 1x,
+                url("images/marenje_team2.jpg") type("image/jpeg") 1x
+              ) center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              image-set(
+                url("images/toWEBP/marenje_team2.webp") type("image/webp") 1x,
+                url("images/marenje_team2.jpg") type("image/jpeg") 1x
+              ) center/cover no-repeat;
 }
 
 .hero h1 {
@@ -113,10 +126,22 @@ html {
 /* Change hero image on smaller screens */
 @media (max-width: 900px) {
   .hero {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url("images/MARENJE TEAM1.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url("images/marenje_team1.jpg") center/cover no-repeat;
+
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                -webkit-image-set(
+                  url("images/toWEBP/marenje_team1.webp") type("image/webp") 1x,
+                  url("images/marenje_team1.jpg") type("image/jpeg") 1x
+                ) center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                image-set(
+                  url("images/toWEBP/marenje_team1.webp") type("image/webp") 1x,
+                  url("images/marenje_team1.jpg") type("image/jpeg") 1x
+                ) center/cover no-repeat;
   }
 }
+
 
 /* Intro Paragraph */
 .intro {

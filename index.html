@@ -23,6 +23,10 @@
   <meta name="twitter:image" content="https://marenjeobt.org/images/logo2.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon_io/site.webmanifest">
   <script src="https://kit.fontawesome.com/40b365e3ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,7 +34,11 @@
     <div class="topnav">
       <!-- Logo stays left -->
       <a href="https://www.twftw.org/" target="_blank" class="logo">
-        <img src="images/logo2.png" alt="The Word For The World Logo" id="logo">
+        <picture>
+          <source srcset="images/toWEBP/logo2.webp" type="image/webp" id="logo">
+          <source srcset="images/logo2.png" type="image/png" id="logo">
+          <img src="images/logo2.png" alt="The Word For The World Logo" id="logo">  
+        </picture>
       </a>
 
       <!-- Navigation links -->
@@ -78,7 +86,11 @@
 
   <footer>
     <div class="copyright">
-      <img src="images/logo.png" alt="The Word For The World Logo">
+      <picture>
+        <source srcset="images/toWEBP/logo.webp" type="image/webp">
+        <source src="images/logo.png" type="image/png">
+        <img src="images/logo.png" alt="The Word For The World Logo">  
+      </picture>
       <p>2025 Marenje OBT. All rights reserved</p>
     </div>
   </footer>
